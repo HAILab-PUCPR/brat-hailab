@@ -9,6 +9,14 @@ Para documentação da ferramenta, acesse:
 - [brat homepage][brat]
 - [brat_github][brat_github]
 
+Exemplos:
+
+<img src="https://brat.nlplab.org/img/examples/esp.train-doc-536-full.png">
+<img src="https://brat.nlplab.org/img/examples/PMID-20300060-full.png">
+<img src="https://brat.nlplab.org/img/examples/PMID-1492121-full.png">
+<img src="https://brat.nlplab.org/img/examples/swedish_talbanken05_train.conll-doc-880-full.png">
+
+
 [brat]:         http://brat.nlplab.org
 [brat_github]:  https://github.com/nlplab/brat/
 
