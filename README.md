@@ -92,6 +92,7 @@ heroku open --app minhaApp
 
 OBS: A aplicação não irá executar na porta 80, o Heroku escolhe uma porta para a sua aplicação executar. Por isso nos arquivos `conf` do Apache usamos a variável de ambiente `${PORT}`.
 
+
 #### Para executar o container no Google Cloud:
 
 Primeiro vamos gerar a imagem e subir para o Google Cloud. Para isso, instale o [Google CLI](https://cloud.google.com/sdk/docs/install?hl=pt-br) e faça o login:
@@ -115,4 +116,4 @@ No seu console do Google, a imagem irá aparecer em *Container Registry*. Seleci
 
 OBS: cuidado para não ultrapassar a cota gratuita do Google Cloud. Hoje esse valor é de 50 horas semanais, então quando não for mais utilizar (ex de madrugada), vá em *APIs e serviços* e clique em *Desativar API*.
 
-
+<a href="https://www.buymeacoffee.com/lisaterumi"><img src="https://raw.githubusercontent.com/lisaterumi/lisaterumi/main/bymeacoffe_mini.png"></a>
