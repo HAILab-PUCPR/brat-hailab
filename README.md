@@ -1,6 +1,6 @@
 # Brat - rapid annotation tool
 
-Neste repositório você encontra os arquivos Docker necessários para executar a ferramenta brat em containers e executar localmente ou em servidres como Heroku e Google Cloud.
+Neste repositório você encontra os arquivos Docker necessários para executar a ferramenta *Brat* em containers e executar localmente ou em servidres como Heroku e Google Cloud.
 
 *Brat - Brat Rapid Annotation Tool* é uma aplicação online para anotação colaborativa de corpus.
 
@@ -60,3 +60,28 @@ Para remover a imagem criada:
 ```
 docker rmi [-f] brat
 ```
+
+#### Para executar o container no Heroku:
+
+Você deverá ter o [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli) instalado. Primeiro, gere uma imagem com o comando build:
+
+```
+```
+
+Faça o login no Heroku (o primeiro comando abrirá o navegador para você se autenticar):
+
+```
+heroku login
+
+heroku container:login
+```
+
+Basta enviar a imagem com o comando `push` e ver a aplicação com o comando `open`:
+
+```
+heroku push --app minhaApp
+
+heroku open --app minhaApp
+```
+
+OBS: A aplicação não irá executar na porta 80, o Heroku escolhe uma porta para a sua aplicação executar. Por isso nos arquivos `conf` do Apache usamos a variável de ambiente `${PORT}`.
