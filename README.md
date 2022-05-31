@@ -116,4 +116,6 @@ No seu console do Google, a imagem irá aparecer em *Container Registry*. Seleci
 
 OBS: cuidado para não ultrapassar a cota gratuita do Google Cloud. Hoje esse valor é de 50 horas semanais, então quando não for mais utilizar (ex de madrugada), vá em *APIs e serviços* e clique em *Desativar API*.
 
-<a href="https://www.buymeacoffee.com/lisaterumi"><img src="https://raw.githubusercontent.com/lisaterumi/lisaterumi/main/bymeacoffe_mini.png"></a>
+
+<a href="https://www.buymeacoffee.com/lisaterumi"><img src="https://raw.githubusercontent.com/lisaterumi/lisaterumi/main/bymeacoffe_mini.png" width="70%"></a>
+
