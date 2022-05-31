@@ -91,3 +91,28 @@ heroku open --app minhaApp
 ```
 
 OBS: A aplicação não irá executar na porta 80, o Heroku escolhe uma porta para a sua aplicação executar. Por isso nos arquivos `conf` do Apache usamos a variável de ambiente `${PORT}`.
+
+#### Para executar o container no Google Cloud:
+
+Primeiro vamos gerar a imagem e subir para o Google Cloud. Para isso, instale o [Google CLI](https://cloud.google.com/sdk/docs/install?hl=pt-br) e faça o login:
+
+```
+gcloud auth login
+```
+
+Agora, supondo que você já fez o build na sua máquina local (de nome `brat`), conforme explicado anteriormente, vamos tagear a nossa imagem. Você precisa ter um projeto já criado no Console do Google.
+
+```
+docker tag brat gcr.io/brat-hailab-351613/brat
+```
+Agora vamos enviar a imagem:
+
+```
+docker push gcr.io/brat-hailab-351613/brat
+```
+
+No seu console do Google, a imagem irá aparecer em *Container Registry*. Selecione a imagem e clique em *Implantar*. O sistema irá implantar a sua imagem e te fornecer uma URL para que você acesse a aplicação.
+
+OBS: cuidado para não ultrapassar a cota gratuita do Google Cloud. Hoje esse valor é de 50 horas semanais, então quando não for mais utilizar (ex de madrugada), vá em *APIs e serviços* e clique em *Desativar API*.
+
+
