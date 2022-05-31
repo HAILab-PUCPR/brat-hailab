@@ -63,10 +63,7 @@ docker rmi [-f] brat
 
 #### Para executar o container no Heroku:
 
-Você deverá ter o [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli) instalado. Primeiro, gere uma imagem com o comando build:
-
-```
-```
+Você deverá ter o [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli) instalado. Primeiro, abra o CMD e entre na pasta onde os arquivos do docker estão (pode ser onde você clonou este projeto).
 
 Faça o login no Heroku (o primeiro comando abrirá o navegador para você se autenticar):
 
