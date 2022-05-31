@@ -54,7 +54,7 @@ Para executar a imagem:
 
 Ou, se desejar executá-la diretamente da nossa [imagem](https://hub.docker.com/repository/docker/terumi/hailab-brat):
 
-	$ docker run --name brat_instance -p 80:80 -d terumi/hailab-brat
+	$ docker run --name brat_instance -p 80:80 -d terumi/hailab-brat:V3
 
 Para abrir a aplicação:
 
