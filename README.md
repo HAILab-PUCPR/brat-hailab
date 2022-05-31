@@ -76,10 +76,12 @@ heroku login
 heroku container:login
 ```
 
-Basta enviar a imagem com o comando `push` e ver a aplicação com o comando `open`:
+Basta enviar a imagem com o comando `push`, executar com o `release` e ver a aplicação com o comando `open`:
 
 ```
-heroku push --app minhaApp
+heroku container:push web --app minhaApp
+
+heroku container:release web --app minhaApp
 
 heroku open --app minhaApp
 ```
