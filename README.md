@@ -97,6 +97,7 @@ heroku open --app minhaApp
 
 OBS: A aplicação não irá executar na porta 80, o Heroku escolhe uma porta para a sua aplicação executar. Por isso nos arquivos `conf` do Apache usamos a variável de ambiente `${PORT}`.
 
+*Atenção: Ao subir a aplicação no Heroku, não há a garantia de que os arquivos persistidos serão mantidos atualizados no servidor. Caso queria criar um trabalho de anotação, por favor verifique uma maneira de gravar os dados anotados em um bucket ou algo assim, para não perder as anotações realizadas a cada re-deploy ou alteração de dyno.*
 
 #### Para executar o container no Google Cloud:
 
