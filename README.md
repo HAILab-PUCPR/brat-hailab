@@ -72,6 +72,28 @@ Para remover a imagem criada:
 ```
 docker rmi [-f] brat
 ```
+OBS: Para persistir os arquivos gravados mesmo após parar o container, você provavelmente precisará definir um volume. Para isso, crie uma pasta chamada `data` e execute o container dessa maneira :
+
+```
+$ docker run --name=brat_instance -p 80:80 -v data:/var/www/brat/brat-v1.3_Crunchy_Frog/data/ -d brat 
+```
+
+Ou, se estiver usando `docker-compose` poderá definir assim:
+
+```
+ brat:
+        build: ./brat
+        container_name: brat_instance
+        restart: unless-stopped
+        tty: true
+        ports:
+            - "80:80"
+        volumes:
+            - ./data:/var/www/brat/brat-v1.3_Crunchy_Frog/data/
+
+```
+Onde na pasta `brat` está o seu `Dockerfile`.
+
 
 #### Para executar o container no Heroku:
 
@@ -97,6 +119,7 @@ heroku open --app minhaApp
 
 OBS: A aplicação não irá executar na porta 80, o Heroku escolhe uma porta para a sua aplicação executar. Por isso nos arquivos `conf` do Apache usamos a variável de ambiente `${PORT}`.
 
+*Atenção: Ao subir a aplicação no Heroku, não há a garantia de que os arquivos persistidos serão mantidos atualizados no servidor. Caso queria criar um trabalho de anotação, por favor verifique uma maneira de gravar os dados anotados em um bucket ou algo assim, para não perder as anotações realizadas a cada re-deploy ou alteração de dyno.*
 
 #### Para executar o container no Google Cloud:
 
