@@ -72,6 +72,28 @@ Para remover a imagem criada:
 ```
 docker rmi [-f] brat
 ```
+OBS: Para persistir os arquivos gravados mesmo após parar o container, você provavelmente precisará definir um volume. Para isso, crie uma pasta chamada `data` e execute o container dessa maneira :
+
+```
+$ docker run --name=brat_instance -p 80:80 -v data:/var/www/brat/brat-v1.3_Crunchy_Frog/data/ -d brat 
+```
+
+Ou, se estiver usando `docker-compose`. poderá definir assim:
+
+```
+ brat:
+        build: ./brat
+        container_name: brat_instance
+        restart: unless-stopped
+        tty: true
+        ports:
+            - "80:80"
+        volumes:
+            - ./data:/var/www/brat/brat-v1.3_Crunchy_Frog/data/
+
+```
+Onde na pasta `brat` está o seu `Dockerfile`.
+
 
 #### Para executar o container no Heroku:
 
