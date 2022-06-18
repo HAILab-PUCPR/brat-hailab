@@ -78,7 +78,7 @@ OBS: Para persistir os arquivos gravados mesmo após parar o container, você pr
 $ docker run --name=brat_instance -p 80:80 -v data:/var/www/brat/brat-v1.3_Crunchy_Frog/data/ -d brat 
 ```
 
-Ou, se estiver usando `docker-compose`. poderá definir assim:
+Ou, se estiver usando `docker-compose` poderá definir assim:
 
 ```
  brat:
